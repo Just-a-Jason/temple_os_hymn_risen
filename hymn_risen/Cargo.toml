@@ -1,0 +1,18 @@
+[package]
+name = "hymn_risen"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "TempleOS_Hymn_Risen"
+path = "src/main.rs"
+
+[dependencies]
+holylib = { path="../holylib" }
+rodio = "0.21.1"
+
+[profile.release]
+opt-level = 3
+strip = true
+codegen-units = 1
+panic = "abort"
